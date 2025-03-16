@@ -22,4 +22,4 @@
 Email: marseg06@mail.ru
 
 
-![Главный экран HACK-MAI-T1](assets/index.png)
+![Главный экран HACK-MAI-T1](assets/index.png) 
