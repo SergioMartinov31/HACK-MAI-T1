@@ -1,0 +1,178 @@
+<!-- Определяем тип HTML-документа для браузера -->
+<!DOCTYPE html>
+<!-- Задаём язык контента страницы (русский язык) -->
+<html lang="ru">
+<head>
+  <!-- Устанавливаем кодировку символов -->
+  <meta charset="UTF-8" />
+  <!-- Добавляем настройку для адаптивности страницы на различных устройствах -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Прописываем заголовок страницы -->
+  <title>Форма (Form)</title>
+  <!-- Подключаем через Google Fonts шрифт Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet"
+  />
+  <!-- Подключаем normalize для единообразного отображения в разных браузерах -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+  />
+  <!-- Подключаем файл со стилями -->
+  <link rel="stylesheet" href="base.css" />
+  <link rel="stylesheet" href="form.css" />
+</head>
+
+<body>
+  <!-- Шапка сайта -->
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <h1 class="logo" href="#">Cards-manager</h1>
+        <nav class="menu">
+          <ul class="menu__list">
+            <li class="menu__list-item">
+              <a class="menu__list-link" href="index.html">ALL cards</a>
+            </li>
+            <li class="menu__list-item">
+              <a class="menu__list-link" href="form.html">Form</a>
+            </li>
+
+            <!-- Важно: добавляем id="reg-link" -->
+            <li class="menu__list-item">
+              <a id="reg-link" class="menu__list-link" href="reg.html">Reg</a>
+            </li>
+            <!-- Важно: добавляем id="signin-link" + меняем Sing на Sign -->
+            <li class="menu__list-item">
+              <a id="signin-link" class="menu__list-link" href="log.html">Sign in</a>
+            </li>
+
+            <li class="menu__list-item">
+              <a id="drop" class="menu__list-link" href="profile">Profile ▿</a>
+              <!-- Само выпадающее меню -->
+              <ul id="drop-menu" class="drop-menu">
+                <li><a href="history.html">История</a></li>
+                <li><a id="logout-link" href="#">Выход</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Основной контент страницы (форма) -->
+  <section class="form">
+    <div class="form-content">
+      <h1 class="main-q">Заполните анкету</h1>
+
+      <form id="myForm">
+        <!-- ВОПРОС 1: Желаемый кредитный лимит -->
+        <div class="slider-container">
+          <label for="credit-limit" class="slider-label">
+            Вопрос 1: Желаемый кредитный лимит
+          </label>
+          <div class="slider-value">
+            <span id="limit-amount">68 000</span> ₽
+          </div>
+          <input 
+            type="range" 
+            id="credit-limit" 
+            name="creditLimit"
+            min="15000" 
+            max="1000000" 
+            step="1000" 
+            value="68000"
+          />
+          <div class="slider-marks">
+            <span>15 000 ₽</span>
+            <span>100 000 ₽</span>
+            <span>500 000 ₽</span>
+            <span>1 000 000 ₽</span>
+          </div>
+        </div>
+
+        <!-- ВОПРОС 2: Устраивает ли вас платное обслуживание? -->
+        <div class="gender-container">
+          <label class="gender-label">
+            Вопрос 2: Устраивает ли вас платное обслуживание?
+          </label>
+          <div>
+            <div>
+              <input type="radio" id="Yes_answer" name="payCondition" value="Yes" checked />
+              <label class="gender_answer" for="Yes_answer"> Да, устраивает</label>
+            </div>
+            <div>
+              <input type="radio" id="No_answer" name="payCondition" value="No" />
+              <label class="gender_answer" for="No_answer"> Нет, мне важно наличие бесплатного обслуживания</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- ВОПРОС 3: Укажите ваш возраст -->
+        <div class="age-container">
+          <label for="age" class="age-label">
+            Вопрос 3: Укажите ваш возраст
+          </label>
+          <input type="text" name="age" placeholder="ваш возраст" />
+        </div>
+
+        <!-- ВОПРОС 4: Для чего нужна карта -->
+        <div class="goal-container">
+          <label for="goal" class="goal-main-label">
+            Вопрос 4: Для чего вам нужна карта
+          </label>
+          <div>
+            <input type="checkbox" id="purchase" name="goals" value="purchase" checked />
+            <label class="goal-label" for="purchase">Покупки</label>
+          </div>
+          <div>
+            <input type="checkbox" id="withdraw" name="goals" value="withdraw" />
+            <label class="goal-label" for="withdraw">Снятие наличных</label>
+          </div>
+          <div>
+            <input type="checkbox" id="installment" name="goals" value="installment" />
+            <label class="goal-label" for="installment">Покупка в рассрочку</label>
+          </div>
+          <div>
+            <input type="checkbox" id="credit-repay" name="goals" value="creditRepay" />
+            <label class="goal-label" for="credit-repay">Погашение других кредитов</label>
+          </div>
+          <div>
+            <input type="checkbox" id="bonus" name="goals" value="bonus" />
+            <label class="goal-label" for="bonus">Оплата покупок бонусами</label>
+          </div>
+        </div>
+
+        <!-- Кнопка отправить -->
+        <input id="openModal" class="end" type="submit" value="Отправить" />
+        <p id="end_notauf" class="go_log_or_reg">Для прохода анкеты надо зарегистрироваться либо войти в аккаунт</p>
+
+        <!-- Модальное окно -->
+        <div id="modal" class="modal">
+          <div class="modal-content">
+            <button class="close">Х</button>
+            <p class="text-goto-history">
+              Результаты анкеты были перенесены в вашу историю
+            </p>
+            <img class="pnd_card" src="cards_img/card_vector.png" />
+            <a class="form_history" href="history.html">Перейти в историю</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Подвал -->
+  <footer class="footer">
+    <h4 class="footer-author">Cards-manager</h4>
+  </footer>
+
+  <!-- Подключаем скрипты в самом конце -->
+  <script src="base.js"></script>
+  <script src="form.js"></script>
+</body>
+</html>

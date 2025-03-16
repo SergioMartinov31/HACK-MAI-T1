@@ -1,0 +1,179 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  p {
+    margin: 0;
+    font-weight: normal;
+    font-size: 100%;
+  }
+
+   
+   /* Убираем стандартное подчёркивание у ссылок */
+   a {
+    text-decoration: none;
+   }
+   
+   /* Устанавливаем минимальный размер экрана и добавляем фоновое изображение */
+   body {
+    font-family: "Montserrat", sans-serif; /* Используем шрифт Montserrat */
+    display: flex;
+    flex-direction: column; /* вертикальная компоновка: header -> main -> footer */
+    height: 100%;
+   }
+
+
+   html{
+    height: 100%;
+   }
+
+   main {
+    flex: 1 0 auto;         /* занимает все доступное пространство */
+  }
+   
+   /* Стилизуем контейнер */
+   .container {
+    max-width: 1190px;
+    padding: 0 15px; /* Увеличиваем боковые отступы */
+    margin: 0 auto; /* Центрируем контейнер по горизонтали */
+   }
+   
+   /* Стилизуем шапку сайта */
+   .header {
+    padding-top: 20px; /* Увеличиваем верхний отступ шапки, чтобы логотип и меню не прилипали к экрану */
+   }
+   
+   /* Стилизуем внутренний контейнер шапки */
+   .header__inner {
+    display: flex; /* Выстраиваем элементы внутри контейнера в строку */
+    justify-content: space-between; /* Распределяем элементы по ширине контейнера */
+    align-items: center; /* Выравниваем элементы по вертикали */
+   }
+   
+   /* Стилизуем логотип */
+   .logo {
+    text-transform: uppercase; /* Преобразуем текст в верхний регистр */
+    font-size: 28px; /* Устанавливаем размер шрифта */
+    font-weight: 900; /* Устанавливаем жирное начертание шрифта */
+    color: #5f7f91; /* Устанавливаем цвет логотипа */
+   }
+   
+   /* Стилизуем списки меню */
+   .menu__list {
+    display: flex; /* Отображаем элементы списка в строку */
+    list-style: none; /* Убираем стандартные маркеры (чёрные точки) */
+   }
+   
+   /* Стилизуем пункты меню */
+  .menu__list-item {
+    position: relative;
+    display: flex;          /* каждый li станет flex-контейнером */
+    align-items: center;    /* выравниваем содержимое по вертикали */
+    margin-right: 20px;
+  } /* Добавляем отступ между пунктами меню */
+  
+   
+   /* Стилизуем ссылки в меню */
+   .menu__list-link {
+    padding: 10px 20px; /* Увеличиваем вертикальный и горизонтальный отступы */
+    font-size: 20px; /* Уменьшаем размер шрифта */
+    color: #5f7f91; /* Устанавливаем цвет ссылок */
+    cursor: pointer; /* Задаём изменение вида курсора при наведении на пункты меню */
+    transition: all 0.3s; /* Добавляем плавное изменение стилей при наведении */
+   }
+   
+   /* Добавляем стилизацию ссылок в меню при наведении курсора */
+   .menu__list-link:hover {
+    color: #eb3e30; /* Задаём изменение цвета ссылок при наведении курсора */
+   }
+
+
+   /* Стили для выпадающего меню */
+.drop-menu {
+  display: none; /* Скрываем меню по умолчанию */
+  position: absolute;
+  background-color: white;
+  top: 50px;     /* или другое фиксированное значение */
+  left: 0;
+  list-style: none;
+  padding: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+
+
+
+  /* Стили для ссылок внутри выпадающего меню */
+  .drop-menu li {
+    margin: 5px 0;
+  }
+  
+  .drop-menu a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 5px;
+  }
+  
+  /* Показываем меню, если добавлен класс active */
+  .drop-menu.active {
+    display: block;
+  }
+
+
+  .menu__list-link {
+    position: relative;
+    text-decoration: none; /* Убираем стандартное подчёркивание */
+    padding-bottom: 5px; /* Добавляем отступ */
+  }
+  
+
+
+  .menu__list-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background-color: red; /* Цвет линии */
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .menu__list-link.active::after {
+    width: 100%; /* Линия появляется */
+  }
+
+  .menu__list-link.active {
+    color: red;
+  }
+
+
+
+
+
+
+
+
+.footer {
+  flex-shrink: 0;    
+    height: 125px;
+    background-color: #5f7f91;
+  }
+  
+  .footer-author {
+    margin: auto;
+    text-align: center;
+    margin-top: 50px;
+    color: white;
+    font-weight: 800;
+    font-size: 25px;
+  }

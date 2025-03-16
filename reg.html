@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="/Users/sergejmartynov/Documents/programing/Front/media/icon.png" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Форма регистрации</title>
+  <link rel="stylesheet" href="base.css" />
+  <link rel="stylesheet" href="log_reg.css">
+</head>
+<body>
+  <main>
+    <!-- Шапка сайта -->
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <h1 class="logo" href="#">Cards-manager</h1>
+          <nav class="menu">
+            <ul class="menu__list">
+              <li class="menu__list-item">
+                <a class="menu__list-link" href="index.html">ALL cards</a>
+              </li>
+              <li class="menu__list-item">
+                <a class="menu__list-link" href="form.html">Form</a>
+              </li>
+
+              <!-- Ссылка на регистрацию -->
+              <li class="menu__list-item">
+                <a id="reg-link" class="menu__list-link" href="reg.html">Reg</a>
+              </li>
+              <!-- Ссылка на вход -->
+              <li class="menu__list-item">
+                <a id="signin-link" class="menu__list-link" href="log.html">Sign in</a>
+              </li>
+              <!-- Профиль (выпадающее меню) -->
+              <li class="menu__list-item">
+                <a id="drop" class="menu__list-link" href="profile">Profile ▿</a>
+                <ul id="drop-menu" class="drop-menu">
+                  <li><a id="drop-history" href="history.html">История</a></li>
+                  <li><a id="logout-link" href="#">Выход</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- Форма регистрации -->
+    <div class="form-reg">
+      <div class="logo-reg">
+        <h3>Cards-manager</h3>
+      </div>
+      <h2 class="form-name">Регистрация</h2>
+      <form class="registration-form">
+        <label class="input-label" for="name">Имя:</label>
+        <input type="text" id="name" name="name" required>
+        <label class="input-label" for="password">Пароль:</label>
+        <input type="password" id="password" name="password" required>
+        <label class="input-label" for="confirm-password">Подтвердите пароль:</label>
+        <input type="password" id="confirm-password" name="confirm-password" required>
+        <p class="Not_same_psw"> * Пароли не совпадают!</p>
+        <button class="reg" type="submit">Зарегистрироваться</button>
+      </form>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <h4 class="footer-author">Cards-manager</h4>
+  </footer>
+  <script src="base.js"></script>
+  <script src="reg.js"></script>
+</body>
+</html>

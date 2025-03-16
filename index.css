@@ -1,0 +1,52 @@
+
+
+
+  .content {
+    width: 770px;
+    margin: 100px auto 50px;
+    font-size: 0;
+  }
+  
+  .card {
+    display: inline-block;
+    width: 360px;
+    height: 500px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    border: 1px solid black;
+    padding: 25px 25px 30px;
+    box-shadow: 4px 4px 0 black;
+    overflow: auto;
+  }
+
+
+
+  .card {
+    scrollbar-width: thin;           /* Делает полосу прокрутки уже */
+    scrollbar-color: #888 #f1f1f1;   /* Цвет ползунка и трека в Firefox */
+  }
+  
+  .no-right-margin {
+    margin-right: 0;
+  }
+  
+  .card-title {
+    margin-bottom: 10px;
+    font-weight: 800;
+    font-size: 31px;
+    text-align: center;
+    /* text-transform: uppercase; */
+  }
+  
+  .card-text {
+    font-size: 18px;
+  }
+  
+  .card-image {
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid black;
+  }
+
+
+  

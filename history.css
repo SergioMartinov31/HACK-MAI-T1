@@ -1,0 +1,145 @@
+
+
+.result-header{
+  color: #5f7f91;
+  font-weight: 800;
+  font-size: 25px;
+  padding: 10px;
+  border: 2px solid #5f7f91;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  margin-top: 50px;
+}
+
+.result-block{
+  margin-left: 190px;
+  margin-right: 200px;
+  padding-top: 30px;
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+}
+
+.card{
+  margin-top: 50px;
+}
+
+
+
+
+
+/* Стили для кнопки удаления истории */
+/* .delete-history-button {
+  margin-top: 100px;
+  width: 180px;
+  height: 55px;
+  margin-right: 190px;
+  background-color: #5f7f91;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 15px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 16px;
+} */
+
+
+
+.delete-history-button:hover {
+  background-color: darkred;
+}
+
+
+.delete-history-btn:hover {
+  text-decoration: underline;       /* Включаем подчеркивание */
+  text-decoration-color: red;       /* Задаем цвет подчеркивания */
+  text-decoration-thickness: 2px;   /* Толщина подчеркивания (дополнительно) */
+  text-underline-offset: 3px;       /* Отступ подчеркивания от текста (дополнительно) */
+}
+
+  .menu__list-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background-color: red; /* Цвет линии */
+    transition: width 0.3s ease-in-out;
+  }
+
+
+
+
+
+
+
+  /* Стили для блока результата */
+
+
+/* Заголовок результата: делаем его кликабельным */
+.result-header {
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+/* Содержимое блока результатов */
+.result-content {
+  padding: 10px;
+  transition: max-height 0.3s ease-in-out;
+}
+
+/* Когда класс "collapsed" добавлен, скрываем содержимое */
+.result-content.collapsed {
+  display: none;
+}
+
+
+
+
+
+.result-block {
+  margin-bottom: 100px;
+  margin-top: 20px;
+  padding: 10px;
+  position: relative;
+}
+
+.result-header:hover {
+  background-color: #eff1f5;
+}
+
+.result-content {
+  padding: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Скрываем содержимое при наличии класса "collapsed" */
+.result-content.collapsed {
+  display: none;
+}
+
+/* Стили для иконки, которая показывает состояние сворачивания */
+.toggle-icon {
+  font-size: 18px;
+}
+
+
+.result-data-header {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 15px;      /* Отступ сверху */
+  font-size: 23px;   
+  font-weight: 600;
+     /* Размер шрифта чуть меньше */
+  color: #5a6570;           /* Серый цвет */
+  border-bottom: 3px solid #5d879e; /* Разделительная линия сверху */
+  padding-bottom: 10px;     /* Отступ внутри после линии */
+}
+.emptyhistory{
+  text-align: center;
+  margin-top: 300px;
+  color: #888;
+  font-size: 20px;
+}
+

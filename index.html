@@ -1,0 +1,284 @@
+<!-- Определяем тип HTML-документа для браузера -->
+<!DOCTYPE html>
+<!-- Задаём язык контента страницы (русский язык) -->
+<html lang="ru">
+<head>
+  <!-- Устанавливаем кодировку символов -->
+  <meta charset="UTF-8" />
+  <!-- Добавляем настройку для адаптивности страницы на различных устройствах -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Прописываем заголовок страницы -->
+  <title>Главная страница</title>
+  <!-- Подключаем через Google Fonts шрифт Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet"
+  />
+  <!-- Подключаем нормализацию стилей для единообразного отображения -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+  />
+  <!-- Подключаем файл со стилями -->
+  <link rel="stylesheet" href="base.css" />
+  <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+  <!-- Шапка сайта -->
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <h1 class="logo" href="#">Cards-manager</h1>
+        <nav class="menu">
+          <ul class="menu__list">
+            <li class="menu__list-item">
+              <a class="menu__list-link" href="index.html">ALL cards</a>
+            </li>
+            <li class="menu__list-item">
+              <a class="menu__list-link" href="form.html">Form</a>
+            </li>
+
+
+            <!-- Добавляем id="reg-link" -->
+            <li class="menu__list-item">
+              <a id="reg-link" class="menu__list-link" href="reg.html">Reg</a>
+            </li>
+
+            <!-- Добавляем id="signin-link" + исправляем 'Sing in' на 'Sign in' -->
+            <li class="menu__list-item">
+              <a id="signin-link" class="menu__list-link" href="log.html">Sign in</a>
+            </li>
+
+            <li class="menu__list-item">
+              <a id="drop" class="menu__list-link">Profile ▿</a>
+              <!-- Само выпадающее меню -->
+              <ul id="drop-menu" class="drop-menu">
+                <li><a id="drop-history" href="history.html">История</a></li>
+                <li><a id="logout-link" href="#">Выход</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Основной контент -->
+  <main>
+    <section class="content">
+      <!-- Пример карточек -->
+      <div class="card"
+           data-card-id="1"
+           data-card-title="Кредитная СберКарт"
+           data-card-img="cards_img/cber/credit_cber.jpeg"
+           data-card-text="Кредитный лимит: до 1 млн ₽
+          Беспроцентный период на все покупки: 120 дней
+          Обслуживание и выпуск карты: бесплатно">
+        <img
+          class="card-image"
+          src="cards_img/cber/credit_cber.jpeg"
+          alt="Кредитная СберКарт"
+        />
+        <h3 class="card-title">Кредитная СберКарта</h3>
+        <p class="card-text">
+          Кредитный лимит: до 1 млн ₽<br />
+          Беспроцентный период на все покупки: 120 дней<br />
+          Обслуживание и выпуск карты: бесплатно
+        </p>
+      </div>
+
+      <div class="card no-right-margin"
+           data-card-id="2"
+           data-card-title="Кредитная СберКарта Молодёжная"
+           data-card-img="cards_img/cber/credit_cber_molod.jpeg"
+           data-card-text="Кредитный лимит: до 1 млн ₽
+            Беспроцентный период на все покупки: 120 дней
+            Обслуживание и выпуск карты: бесплатно">
+        <img
+          class="card-image"
+          src="cards_img/cber/credit_cber_molod.jpeg"
+          alt="Кредитная СберКарта Молодёжная"
+        />
+        <h3 class="card-title">Кредитная СберКарта Молодёжная</h3>
+        <p class="card-text">
+          Кредитный лимит: до 1 млн ₽<br />
+          Беспроцентный период на все покупки: 120 дней<br />
+          Обслуживание и выпуск карты: бесплатно
+        </p>
+      </div>
+
+      <div class="card"
+           data-card-id="3"
+           data-card-title="Кредитная СберКарта Премиум"
+           data-card-img="https://www.sberbank.com/static/images/prod_product/2024_11/1730978040000_29996_imageUrl.jpeg"
+           data-card-text="Кредитный лимит: до 1 млн ₽
+            Беспроцентный период на все покупки: 120 дней
+            Обслуживание и выпуск карты: бесплатно">
+        <img
+          class="card-image"
+          src="https://www.sberbank.com/static/images/prod_product/2024_11/1730978040000_29996_imageUrl.jpeg"
+          alt="Кредитная СберКарта Премиум"
+        />
+        <h3 class="card-title">Кредитная СберКарта Премиум</h3>
+        <p class="card-text">
+          Кредитный лимит: до 1 млн ₽<br />
+          Беспроцентный период на все покупки: 120 дней<br />
+          Обслуживание и выпуск карты: бесплатно
+        </p>
+      </div>
+
+      <div class="card no-right-margin"
+           data-card-id="4"
+           data-card-title="Кредитная карта 'Платинум'"
+           data-card-img="https://cdn.tbank.ru/static/pages/files/95bf1279-6dee-4e8e-9b93-b464daaec408.png"
+           data-card-text="Кредитный лимит: до 1 млн ₽
+            Беспроцентный период на все покупки: 120 дней
+            Обслуживание и выпуск карты: бесплатно">
+        <img
+          class="card-image"
+          src="https://cdn.tbank.ru/static/pages/files/95bf1279-6dee-4e8e-9b93-b464daaec408.png"
+          alt="Кредитная карта 'Платинум'"
+        />
+        <h3 class="card-title">Кредитная карта 'Платинум'</h3>
+        <p class="card-text">
+          Кредитный лимит: до 1 млн ₽<br />
+          Беспроцентный период на все покупки: 120 дней<br />
+          Обслуживание и выпуск карты: бесплатно
+        </p>
+      </div>
+
+      <div class="card"
+           data-card-id="5"
+           data-card-title="Кредитная карта Platinum Premium"
+           data-card-img="https://cdn.tbank.ru/static/pages/files/31f326d3-7c77-44b2-8e6a-9b1e5c75666c.webp"
+           data-card-text="Кредитный лимит: до 1 млн ₽
+            Беспроцентный период на все покупки: 120 дней
+            Обслуживание и выпуск карты: бесплатно">
+        <img
+          class="card-image"
+          src="https://cdn.tbank.ru/static/pages/files/31f326d3-7c77-44b2-8e6a-9b1e5c75666c.webp"
+          alt="Кредитная карта Platinum Premium"
+        />
+        <h3 class="card-title">Кредитная карта Platinum Premium</h3>
+        <p class="card-text">
+          Кредитный лимит: до 1 млн ₽<br />
+          Беспроцентный период на все покупки: 120 дней<br />
+          Обслуживание и выпуск карты: бесплатно
+        </p>
+      </div>
+
+      <div class="card no-right-margin"
+           data-card-id="6"
+           data-card-title="All Airlines Premium"
+           data-card-img="https://cdn.tbank.ru/static/pages/files/bea24e50-3fdc-4ecd-acb1-04938091a3c2.webp"
+           data-card-text="Кредитный лимит: до 1 млн ₽
+            Беспроцентный период на все покупки: 120 дней
+            Обслуживание и выпуск карты: бесплатно">
+        <img
+          class="card-image"
+          src="https://cdn.tbank.ru/static/pages/files/bea24e50-3fdc-4ecd-acb1-04938091a3c2.webp"
+          alt="All Airlines Premium"
+        />
+        <h3 class="card-title">All Airlines Premium</h3>
+        <p class="card-text">
+          Кредитный лимит: до 1 млн ₽<br />
+          Беспроцентный период на все покупки: 120 дней<br />
+          Обслуживание и выпуск карты: бесплатно
+        </p>
+      </div>
+
+      <div class="card"
+           data-card-id="7"
+           data-card-title="Кредитная карта S7 — T‑Bank Premium"
+           data-card-img="https://imgproxy.cdn-tinkoff.ru/compressed95/aHR0cHM6Ly9jZG4udGJhbmsucnUvc3RhdGljL3BhZ2VzL2ZpbGVzL2Y3ODc5NTUxLTAyMjEtNGQ5OS1hZTVkLWM0MmFhZGE2NmRlNi5wbmc="
+           data-card-text="Кредитный лимит: до 1 млн ₽
+            Беспроцентный период на все покупки: 120 дней
+            Обслуживание и выпуск карты: бесплатно">
+        <img
+          class="card-image"
+          src="https://imgproxy.cdn-tinkoff.ru/compressed95/aHR0cHM6Ly9jZG4udGJhbmsucnUvc3RhdGljL3BhZ2VzL2ZpbGVzL2Y3ODc5NTUxLTAyMjEtNGQ5OS1hZTVkLWM0MmFhZGE2NmRlNi5wbmc="
+          alt="Кредитная карта S7 — T‑Bank Premium"
+        />
+        <h3 class="card-title">Кредитная карта S7 — T‑Bank Premium</h3>
+        <p class="card-text">
+          Кредитный лимит: до 1 млн ₽<br />
+          Беспроцентный период на все покупки: 120 дней<br />
+          Обслуживание и выпуск карты: бесплатно
+        </p>
+      </div>
+
+      <div class="card no-right-margin"
+           data-card-id="8"
+           data-card-title="All Airlines Premium (Duplicate)"
+           data-card-img="https://cdn.tbank.ru/static/pages/files/bea24e50-3fdc-4ecd-acb1-04938091a3c2.webp"
+           data-card-text="Кредитный лимит: до 1 млн ₽
+            Беспроцентный период на все покупки: 120 дней
+            Обслуживание и выпуск карты: бесплатно">
+        <img
+          class="card-image"
+          src="https://cdn.tbank.ru/static/pages/files/bea24e50-3fdc-4ecd-acb1-04938091a3c2.webp"
+          alt="All Airlines Premium"
+        />
+        <h3 class="card-title">All Airlines Premium (Duplicate)</h3>
+        <p class="card-text">
+          Кредитный лимит: до 1 млн ₽<br />
+          Беспроцентный период на все покупки: 120 дней<br />
+          Обслуживание и выпуск карты: бесплатно
+        </p>
+      </div>
+
+      <div class="card"
+           data-card-id="9"
+           data-card-title="Кредитная «Карта возможностей» ВТБ"
+           data-card-img="https://www.vtb.ru/media-files/vtb.ru/sitepages/personal/karty/Karty_W_CreditCard_2x.webp"
+           data-card-text="Кредитный лимит: до 1 млн ₽
+            Беспроцентный период на все покупки: 120 дней
+            Обслуживание и выпуск карты: бесплатно">
+        <img
+          class="card-image"
+          src="https://www.vtb.ru/media-files/vtb.ru/sitepages/personal/karty/Karty_W_CreditCard_2x.webp"
+          alt="Кредитная «Карта возможностей» ВТБ"
+        />
+        <h3 class="card-title">Кредитная «Карта возможностей» ВТБ</h3>
+        <p class="card-text">
+          Кредитный лимит: до 1 млн ₽<br />
+          Беспроцентный период на все покупки: 120 дней<br />
+          Обслуживание и выпуск карты: бесплатно
+        </p>
+      </div>
+
+      <div class="card no-right-margin"
+           data-card-id="10"
+           data-card-title="Кредитная «Карта возможностей» Привилегия"
+           data-card-img="https://www.vtb.ru/media-files/vtb.ru/shared/images/hero/Privilegia_H_CardVozm_2x.webp"
+           data-card-text="Кредитный лимит: до 1 млн ₽
+            Беспроцентный период на все покупки: 120 дней
+            Обслуживание и выпуск карты: бесплатно">
+        <img
+          class="card-image"
+          src="https://www.vtb.ru/media-files/vtb.ru/shared/images/hero/Privilegia_H_CardVozm_2x.webp"
+          alt="Кредитная «Карта возможностей» Привилегия"
+        />
+        <h3 class="card-title">Кредитная «Карта возможностей» Привилегия</h3>
+        <p class="card-text">
+          Кредитный лимит: до 1 млн ₽<br />
+          Беспроцентный период на все покупки: 120 дней<br />
+          Обслуживание и выпуск карты: бесплатно
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Подвал -->
+  <footer class="footer">
+    <h4 class="footer-author">Cards-manager</h4>
+  </footer>
+
+  <!-- Скрипты -->
+  <script src="base.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>

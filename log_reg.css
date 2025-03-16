@@ -1,0 +1,116 @@
+
+
+.form-reg {
+    /* background-color: #eb3e30; */
+    width: 500px;
+    margin: 20px auto 60px;
+    height:  590px;
+    margin: 80px auto 50px;
+    border: 4px solid #5f7f91;
+    border-radius: 10px;
+}
+
+.form-sing-in {
+  /* background-color: #eb3e30; */
+  width: 500px;
+  margin: 20px auto 60px;
+  height:  475px;
+  margin: 80px auto 50px;
+  border: 4px solid #5f7f91;
+  border-radius: 10px;
+}
+
+.logo-reg {
+    text-transform: uppercase; /* Преобразуем текст в верхний регистр */
+    font-size: 28px; /* Устанавливаем размер шрифта */
+    font-weight: 900; /* Устанавливаем жирное начертание шрифта */
+    color: #5f7f91; /* Устанавливаем цвет логотипа */
+    text-align: center;
+    margin-top: 20px;
+   }
+
+input {
+    padding: 10px;
+    margin-bottom: 25px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 450px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+.form-name{
+  padding-top: 20px;
+  font-weight: 500;
+  font-size: 22px;
+  color: #363333ca;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+
+
+.registration-form {
+  
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.input-label {
+  font-weight: 500;
+  font-size: 22px;
+  color: #363333ca;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  
+}
+
+
+
+.reg {
+  display: flex;
+  justify-content: center; /* Горизонтальное центрирование */
+  align-items: center;     /* Вертикальное центрирование */
+  width: 260px;
+  height: 50px;
+  border-radius: 15px;
+  background-color:#5d869dc0;
+  color: white;
+  font-weight: 600;
+  font-size: 23px;
+  margin: auto;
+  margin-top: 19px;
+}
+
+.sing-in {
+  display: flex;
+  justify-content: center; /* Горизонтальное центрирование */
+  align-items: center;     /* Вертикальное центрирование */
+  width: 160px;
+  height: 50px;
+  border-radius: 15px;
+  background-color:#5d869dc0;
+  color: white;
+  font-weight: 600;
+  font-size: 23px;
+  margin: auto;
+  margin-top: 19px;
+}
+
+
+.Not_same_psw {
+  display: none;
+  margin-left: 20px;
+  color: rgba(255, 0, 0, 0.697);
+  font-size: 20px;
+  font-weight: 10px;
+}
+
+
+
+.Not_same_psw.active {
+  display: block;
+}
