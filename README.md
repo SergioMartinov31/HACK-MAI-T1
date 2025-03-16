@@ -26,3 +26,4 @@
 ## ✉️ Контакты
 Email: marseg06@mail.ru
 
+![Главный экран HACK-MAI-T1](assets/index.png) 
